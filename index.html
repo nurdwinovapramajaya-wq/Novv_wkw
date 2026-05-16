@@ -3,197 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profil Lengkap - Nur Dwi Nova Pramajaya</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        }
-
-        body {
-            background-color: #f0f4f8;
-            padding: 40px 20px;
-            line-height: 1.7;
-        }
-
-        .kartu-profil {
-            max-width: 650px;
-            margin: 0 auto;
-            background: #ffffff;
-            border-radius: 15px;
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
-            overflow: hidden;
-        }
-
-        .bagian-atas {
-            background: linear-gradient(135deg, #165DFF 0%, #3685FF 100%);
-            color: white;
-            padding: 40px 30px;
-            text-align: center;
-        }
-
-        .foto-profil {
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            border: 5px solid white;
-            object-fit: cover;
-            margin-bottom: 18px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-
-        .bagian-atas h1 {
-            font-size: 24px;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-
-        .status {
-            font-size: 16px;
-            opacity: 0.92;
-            font-weight: 400;
-        }
-
-        .bagian-isi {
-            padding: 35px;
-        }
-
-        .bagian {
-            margin-bottom: 30px;
-        }
-
-        .judul-bagian {
-            font-size: 18px;
-            color: #165DFF;
-            border-bottom: 2px solid #e0e7ee;
-            padding-bottom: 8px;
-            margin-bottom: 18px;
-            font-weight: 600;
-        }
-
-        .data-item {
-            display: flex;
-            padding: 8px 0;
-            font-size: 15px;
-            border-bottom: 1px dashed #eee;
-        }
-
-        .label {
-            font-weight: 600;
-            width: 160px;
-            color: #555;
-        }
-
-        .nilai {
-            color: #333;
-            flex: 1;
-        }
-
-        .nilai a {
-            color: #165DFF;
-            text-decoration: none;
-        }
-
-        .nilai a:hover {
-            text-decoration: underline;
-        }
-
-        .deskripsi {
-            font-size: 15px;
-            color: #444;
-            text-align: justify;
-        }
-
-        .deskripsi p {
-            margin-bottom: 12px;
-        }
-
-        @media (max-width: 480px) {
-            .data-item {
-                flex-direction: column;
+    <title>Profil | Nur Dwi Nova Pramajaya</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0F4C81',
+                        secondary: '#2A70B9',
+                        neutral: '#F8F9FC',
+                        dark: '#2D3748',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
             }
-            .label {
-                width: auto;
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .shadow-soft {
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+            }
+            .border-dashed-custom {
+                border-style: dashed;
+                border-width: 1px;
             }
         }
     </style>
 </head>
-<body>
-    <div class="kartu-profil">
-        <!-- Bagian Atas: Foto & Nama -->
-        <div class="bagian-atas">
-            <img src="IMG_20251001_161401.jpg" alt="Foto Profil Nur Dwi Nova Pramajaya" class="foto-profil">
-            <h1>NUR DWI NOVA PRAMAJAYA</h1>
-            <p class="status">Siswa SMKN 1 Cirebon | Teknik Jaringan Komputer & Telekomunikasi</p>
-        </div>
-
-        <!-- Bagian Isi Utama -->
-        <div class="bagian-isi">
-
-            <!-- Informasi Pribadi -->
-            <div class="bagian">
-                <h2 class="judul-bagian">📌 Informasi Pribadi</h2>
-                <div class="data-item">
-                    <span class="label">Nama Lengkap</span>
-                    <span class="nilai">Nur Dwi Nova Pramajaya</span>
-                </div>
-                <div class="data-item">
-                    <span class="label">Tempat, Tgl Lahir</span>
-                    <span class="nilai">Kuningan, 30 November 2009</span>
-                </div>
-                <div class="data-item">
-                    <span class="label">Jenis Kelamin</span>
-                    <span class="nilai">Laki-laki</span>
-                </div>
-                <div class="data-item">
-                    <span class="label">Asal Sekolah</span>
-                    <span class="nilai">SMK Negeri 1 Cirebon</span>
-                </div>
-                <div class="data-item">
-                    <span class="label">Kelas / Jurusan</span>
-                    <span class="nilai">X TJKT 2 (Teknik Jaringan Komputer & Telekomunikasi)</span>
-                </div>
-                <div class="data-item">
-                    <span class="label">Hobi</span>
-                    <span class="nilai">Berlari</span>
-                </div>
+<body class="bg-neutral min-h-screen font-sans text-dark">
+    <div class="container mx-auto px-4 py-10 max-w-3xl">
+        <!-- Kartu Utama -->
+        <div class="bg-white rounded-2xl shadow-soft overflow-hidden">
+            
+            <!-- Bagian Header / Atas -->
+            <div class="bg-gradient-to-r from-primary to-secondary px-8 py-10 text-center">
+                <img src="foto.jpg" alt="Foto Profil" class="w-36 h-36 rounded-full object-cover border-4 border-white shadow-lg mx-auto mb-4">
+                <h1 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-white">NUR DWI NOVA PRAMAJAYA</h1>
+                <p class="text-blue-100 text-lg">Siswa SMKN 1 Cirebon | Teknik Jaringan Komputer</p>
             </div>
 
-            <!-- Kontak & Media Sosial -->
-            <div class="bagian">
-                <h2 class="judul-bagian">📞 Kontak & Media Sosial</h2>
-                <div class="data-item">
-                    <span class="label">Nomor WhatsApp</span>
-                    <span class="nilai"><a href="https://wa.me/6281313758657" target="_blank">0813-1375-8657</a></span>
+            <!-- Bagian Isi -->
+            <div class="px-8 py-10">
+
+                <!-- Informasi Pribadi -->
+                <div class="mb-10">
+                    <h2 class="text-xl font-semibold text-primary border-b-2 border-blue-100 pb-2 mb-5">
+                        <i class="fa fa-user-circle mr-2"></i> Informasi Pribadi
+                    </h2>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="flex justify-between py-2 border-b border-dashed-custom border-gray-200">
+                            <span class="font-medium text-gray-600 w-28">Nama Lengkap</span>
+                            <span class="text-right flex-1">Nur Dwi Nova Pramajaya</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-dashed-custom border-gray-200">
+                            <span class="font-medium text-gray-600 w-28">Tempat Lahir</span>
+                            <span class="text-right flex-1">Kuningan</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-dashed-custom border-gray-200">
+                            <span class="font-medium text-gray-600 w-28">Tgl Lahir</span>
+                            <span class="text-right flex-1">30 November 2009</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-dashed-custom border-gray-200">
+                            <span class="font-medium text-gray-600 w-28">Sekolah</span>
+                            <span class="text-right flex-1">SMKN 1 Cirebon</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-dashed-custom border-gray-200">
+                            <span class="font-medium text-gray-600 w-28">Kelas</span>
+                            <span class="text-right flex-1">X TJKT 2</span>
+                        </div>
+                        <div class="flex justify-between py-2 border-b border-dashed-custom border-gray-200 md:col-span-2">
+                            <span class="font-medium text-gray-600 w-28">Hobi</span>
+                            <span class="text-right flex-1">Berlari</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="data-item">
-                    <span class="label">Alamat Email</span>
-                    <span class="nilai"><a href="mailto:nurdwinovapramajaya@gmail.com">nurdwinovapramajaya@gmail.com</a></span>
+
+                <!-- Tentang Saya -->
+                <div class="mb-10">
+                    <h2 class="text-xl font-semibold text-primary border-b-2 border-blue-100 pb-2 mb-5">
+                        <i class="fa fa-quote-left mr-2"></i> Tentang Saya
+                    </h2>
+                    <div class="text-gray-700 leading-relaxed text-justify space-y-3">
+                        <p>Halo, perkenalkan nama saya Nur Dwi Nova Pramajaya. Saya adalah siswa kelas X TJKT 2 di SMK Negeri 1 Cirebon. Saya lahir di Kuningan pada tanggal 30 November 2009. Saat ini saya sedang menempuh pendidikan kejuruan dengan fokus utama pada Teknik Jaringan Komputer dan Telekomunikasi.</p>
+                        
+                        <p>Saya memiliki ketertarikan yang besar terhadap dunia teknologi, khususnya bagaimana jaringan bekerja, cara konfigurasi perangkat, serta sistem komunikasi data. Saya memilih jurusan ini karena saya ingin memahami lebih dalam tentang dunia IT dan berharap suatu hari nanti bisa berkarier di bidang teknologi sebagai ahli jaringan atau tenaga profesional di bidang telekomunikasi.</p>
+                        
+                        <p>Di sela-sela kesibukan belajar, saya memiliki hobi berlari. Bagi saya, berlari bukan hanya sekadar olahraga untuk menjaga kesehatan tubuh, tetapi juga sarana melatih kedisiplinan, ketahanan mental, dan semangat pantang menyerah. Prinsip hidup yang saya pegang adalah "Terus melangkah meski berat, sampai mencapai garis akhir". Prinsip ini selalu saya terapkan dalam segala hal, termasuk saat mengerjakan tugas sekolah maupun menghadapi tantangan baru.</p>
+                        
+                        <p>Saya adalah pribadi yang ingin terus berkembang, suka belajar hal baru, dan mudah bergaul dengan siapa saja. Saya percaya bahwa dengan kerja keras, ketekunan, dan rasa ingin tahu yang tinggi, saya bisa meraih cita-cita saya dan menjadi orang yang berguna bagi keluarga, masyarakat, dan bangsa.</p>
+                        
+                        <p>Terima kasih telah mengunjungi halaman profil saya. Jika ada keperluan, ingin berkenalan, atau berdiskusi seputar teknologi, silakan hubungi saya melalui kontak di bawah ini.</p>
+                    </div>
                 </div>
-                <div class="data-item">
-                    <span class="label">Channel YouTube</span>
-                    <span class="nilai"><a href="https://www.youtube.com/@nurdwinovapramajaya" target="_blank">@nurdwinovapramajaya</a></span>
+
+                <!-- Kontak & Media Sosial (Dipindah ke AKHIR) -->
+                <div>
+                    <h2 class="text-xl font-semibold text-primary border-b-2 border-blue-100 pb-2 mb-5 text-center">
+                        <i class="fa fa-paper-plane mr-2"></i> Hubungi Saya
+                    </h2>
+                    <div class="flex items-center justify-center gap-10 py-4">
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/6281313758657" target="_blank" class="flex flex-col items-center gap-2 group">
+                            <div class="w-14 h-14 bg-green-50 rounded-full flex items-center justify-center group-hover:bg-green-500 transition-all duration-300 shadow-sm">
+                                <i class="fa fa-whatsapp text-2xl text-green-500 group-hover:text-white"></i>
+                            </div>
+                            <span class="text-sm text-gray-600">WhatsApp</span>
+                        </a>
+                        <!-- Email -->
+                        <a href="mailto:nurdwinovapramajaya@gmail.com" target="_blank" class="flex flex-col items-center gap-2 group">
+                            <div class="w-14 h-14 bg-red-50 rounded-full flex items-center justify-center group-hover:bg-red-500 transition-all duration-300 shadow-sm">
+                                <i class="fa fa-envelope text-2xl text-red-500 group-hover:text-white"></i>
+                            </div>
+                            <span class="text-sm text-gray-600">Email</span>
+                        </a>
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/@nurdwinovapramajaya" target="_blank" class="flex flex-col items-center gap-2 group">
+                            <div class="w-14 h-14 bg-red-50 rounded-full flex items-center justify-center group-hover:bg-red-600 transition-all duration-300 shadow-sm">
+                                <i class="fa fa-youtube-play text-2xl text-red-600 group-hover:text-white"></i>
+                            </div>
+                            <span class="text-sm text-gray-600">YouTube</span>
+                        </a>
+                    </div>
                 </div>
+
             </div>
-
-            <!-- Tentang Saya (Versi Lebih Panjang) -->
-            <div class="bagian">
-                <h2 class="judul-bagian">👨‍🎓 Tentang Saya</h2>
-                <div class="deskripsi">
-                    <p>Halo! Nama saya Nur Dwi Nova Pramajaya. Saya adalah seorang siswa yang bersemangat dan berdedikasi yang saat ini menempuh pendidikan di SMK Negeri 1 Cirebon, tepatnya di kelas X TJKT 2, jurusan Teknik Jaringan Komputer dan Telekomunikasi. Saya lahir di Kuningan pada tanggal 30 November 2009, dan kini saya bertekad untuk mengembangkan kemampuan diri di dunia teknologi informasi.</p>
-
-                    <p>Memilih jurusan TJKT adalah langkah awal saya untuk mendalami dunia jaringan komputer, sistem komunikasi, dan teknologi digital yang semakin berkembang pesat. Saya sangat tertarik mempelajari bagaimana cara kerja internet, konfigurasi jaringan, serta cara menghubungkan satu perangkat dengan perangkat lainnya. Saya berharap kelak bisa menjadi seorang teknisi jaringan atau ahli IT yang handal dan berguna bagi banyak orang.</p>
-
-                    <p>Di luar jam sekolah, hobi utama saya adalah berlari. Bagi saya, berlari bukan sekadar olahraga, tetapi juga cara melatih kedisiplinan, ketahanan fisik, dan kekuatan mental. Prinsip yang saya pegang dari hobi ini adalah: "Jangan berhenti sebelum garis finis". Prinsip ini juga saya terapkan dalam belajar, yaitu tidak mudah menyerah meskipun menghadapi materi yang sulit.</p>
-
-                    <p>Saya adalah pribadi yang ramah, mudah bergaul, dan suka bekerja sama dalam tim. Saya selalu berusaha menjadi siswa yang taat aturan, sopan, dan bertanggung jawab atas segala tugas yang diberikan. Saya juga sangat senang bertemu teman baru, berbagi ilmu, dan belajar hal-hal baru yang bisa menambah wawasan saya.</p>
-
-                    <p>Jika kamu ingin berkenalan, berdiskusi seputar teknologi, atau sekadar ingin mengobrol, jangan ragu untuk menghubungi saya melalui WhatsApp, Email, atau mengunjungi channel YouTube saya yang tertera di atas. Terima kasih sudah mengunjungi profil saya!</p>
-                </div>
-            </div>
-
         </div>
     </div>
 </body>
