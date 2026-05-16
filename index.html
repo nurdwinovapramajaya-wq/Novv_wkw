@@ -2,79 +2,87 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"content="width=device-width, initial-scale=1.0">
-    <title>Data Diri - Nur Dwi Nova Pramajaya</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Lengkap - Nur Dwi Nova Pramajaya</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Roboto, sans-serif;
+            font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         }
 
         body {
             background-color: #f0f4f8;
             padding: 40px 20px;
+            line-height: 1.7;
         }
 
         .kartu-profil {
-            max-width: 600px;
+            max-width: 650px;
             margin: 0 auto;
             background: #ffffff;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
             overflow: hidden;
         }
 
         .bagian-atas {
             background: linear-gradient(135deg, #165DFF 0%, #3685FF 100%);
             color: white;
-            padding: 30px;
+            padding: 40px 30px;
             text-align: center;
         }
 
         .foto-profil {
-            width: 130px;
-            height: 130px;
+            width: 140px;
+            height: 140px;
             border-radius: 50%;
-            border: 4px solid white;
+            border: 5px solid white;
             object-fit: cover;
-            margin-bottom: 15px;
+            margin-bottom: 18px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
         }
 
         .bagian-atas h1 {
-            font-size: 22px;
-            font-weight: 600;
-            margin-bottom: 5px;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 6px;
         }
 
         .status {
-            font-size: 15px;
-            opacity: 0.9;
+            font-size: 16px;
+            opacity: 0.92;
+            font-weight: 400;
         }
 
         .bagian-isi {
-            padding: 30px;
+            padding: 35px;
+        }
+
+        .bagian {
+            margin-bottom: 30px;
         }
 
         .judul-bagian {
-            font-size: 17px;
+            font-size: 18px;
             color: #165DFF;
-            border-bottom: 1px solid #e0e7ee;
-            padding-bottom: 6px;
-            margin-bottom: 15px;
+            border-bottom: 2px solid #e0e7ee;
+            padding-bottom: 8px;
+            margin-bottom: 18px;
             font-weight: 600;
         }
 
         .data-item {
             display: flex;
-            padding: 7px 0;
+            padding: 8px 0;
             font-size: 15px;
+            border-bottom: 1px dashed #eee;
         }
 
         .label {
-            font-weight: 500;
-            width: 140px;
+            font-weight: 600;
+            width: 160px;
             color: #555;
         }
 
@@ -83,11 +91,23 @@
             flex: 1;
         }
 
+        .nilai a {
+            color: #165DFF;
+            text-decoration: none;
+        }
+
+        .nilai a:hover {
+            text-decoration: underline;
+        }
+
         .deskripsi {
             font-size: 15px;
             color: #444;
-            line-height: 1.7;
             text-align: justify;
+        }
+
+        .deskripsi p {
+            margin-bottom: 12px;
         }
 
         @media (max-width: 480px) {
@@ -102,17 +122,19 @@
 </head>
 <body>
     <div class="kartu-profil">
-        <!-- Bagian Atas -->
+        <!-- Bagian Atas: Foto & Nama -->
         <div class="bagian-atas">
-            <img src="IMG_20251001_161401.jpg" alt="Foto Profil" class="foto-profil">
-            <h1>Nur Dwi Nova Pramajaya</h1>
-            <p class="status">Siswa SMKN 1 Cirebon</p>
+            <img src="foto.jpg" alt="Foto Profil Nur Dwi Nova Pramajaya" class="foto-profil">
+            <h1>NUR DWI NOVA PRAMAJAYA</h1>
+            <p class="status">Siswa SMKN 1 Cirebon | Teknik Jaringan Komputer & Telekomunikasi</p>
         </div>
 
-        <!-- Bagian Isi Data -->
+        <!-- Bagian Isi Utama -->
         <div class="bagian-isi">
+
+            <!-- Informasi Pribadi -->
             <div class="bagian">
-                <h2 class="judul-bagian">Informasi Pribadi</h2>
+                <h2 class="judul-bagian">📌 Informasi Pribadi</h2>
                 <div class="data-item">
                     <span class="label">Nama Lengkap</span>
                     <span class="nilai">Nur Dwi Nova Pramajaya</span>
@@ -122,12 +144,16 @@
                     <span class="nilai">Kuningan, 30 November 2009</span>
                 </div>
                 <div class="data-item">
+                    <span class="label">Jenis Kelamin</span>
+                    <span class="nilai">Laki-laki</span>
+                </div>
+                <div class="data-item">
                     <span class="label">Asal Sekolah</span>
-                    <span class="nilai">SMKN 1 Cirebon</span>
+                    <span class="nilai">SMK Negeri 1 Cirebon</span>
                 </div>
                 <div class="data-item">
                     <span class="label">Kelas / Jurusan</span>
-                    <span class="nilai">X TJKT 2</span>
+                    <span class="nilai">X TJKT 2 (Teknik Jaringan Komputer & Telekomunikasi)</span>
                 </div>
                 <div class="data-item">
                     <span class="label">Hobi</span>
@@ -135,12 +161,39 @@
                 </div>
             </div>
 
-            <div class="bagian" style="margin-top: 20px;">
-                <h2 class="judul-bagian">Tentang Saya</h2>
-                <p class="deskripsi">
-                    Saya adalah siswa yang bersekolah di SMKN 1 Cirebon, mengambil jurusan Teknik Jaringan Komputer dan Telekomunikasi. Saya memiliki ketertarikan besar dalam dunia teknologi dan jaringan. Hobi saya berlari melatih saya untuk selalu disiplin, kuat, dan pantang menyerah dalam meraih tujuan. Saya senang belajar hal baru, bekerja sama dalam tim, dan berusaha menjadi pribadi yang lebih baik setiap harinya.
-                </p>
+            <!-- Kontak & Media Sosial -->
+            <div class="bagian">
+                <h2 class="judul-bagian">📞 Kontak & Media Sosial</h2>
+                <div class="data-item">
+                    <span class="label">Nomor WhatsApp</span>
+                    <span class="nilai"><a href="https://wa.me/6281313758657" target="_blank">0813-1375-8657</a></span>
+                </div>
+                <div class="data-item">
+                    <span class="label">Alamat Email</span>
+                    <span class="nilai"><a href="mailto:nurdwinovapramajaya@gmail.com">nurdwinovapramajaya@gmail.com</a></span>
+                </div>
+                <div class="data-item">
+                    <span class="label">Channel YouTube</span>
+                    <span class="nilai"><a href="https://www.youtube.com/@nurdwinovapramajaya" target="_blank">@nurdwinovapramajaya</a></span>
+                </div>
             </div>
+
+            <!-- Tentang Saya (Versi Lebih Panjang) -->
+            <div class="bagian">
+                <h2 class="judul-bagian">👨‍🎓 Tentang Saya</h2>
+                <div class="deskripsi">
+                    <p>Halo! Nama saya Nur Dwi Nova Pramajaya. Saya adalah seorang siswa yang bersemangat dan berdedikasi yang saat ini menempuh pendidikan di SMK Negeri 1 Cirebon, tepatnya di kelas X TJKT 2, jurusan Teknik Jaringan Komputer dan Telekomunikasi. Saya lahir di Kuningan pada tanggal 30 November 2009, dan kini saya bertekad untuk mengembangkan kemampuan diri di dunia teknologi informasi.</p>
+
+                    <p>Memilih jurusan TJKT adalah langkah awal saya untuk mendalami dunia jaringan komputer, sistem komunikasi, dan teknologi digital yang semakin berkembang pesat. Saya sangat tertarik mempelajari bagaimana cara kerja internet, konfigurasi jaringan, serta cara menghubungkan satu perangkat dengan perangkat lainnya. Saya berharap kelak bisa menjadi seorang teknisi jaringan atau ahli IT yang handal dan berguna bagi banyak orang.</p>
+
+                    <p>Di luar jam sekolah, hobi utama saya adalah berlari. Bagi saya, berlari bukan sekadar olahraga, tetapi juga cara melatih kedisiplinan, ketahanan fisik, dan kekuatan mental. Prinsip yang saya pegang dari hobi ini adalah: "Jangan berhenti sebelum garis finis". Prinsip ini juga saya terapkan dalam belajar, yaitu tidak mudah menyerah meskipun menghadapi materi yang sulit.</p>
+
+                    <p>Saya adalah pribadi yang ramah, mudah bergaul, dan suka bekerja sama dalam tim. Saya selalu berusaha menjadi siswa yang taat aturan, sopan, dan bertanggung jawab atas segala tugas yang diberikan. Saya juga sangat senang bertemu teman baru, berbagi ilmu, dan belajar hal-hal baru yang bisa menambah wawasan saya.</p>
+
+                    <p>Jika kamu ingin berkenalan, berdiskusi seputar teknologi, atau sekadar ingin mengobrol, jangan ragu untuk menghubungi saya melalui WhatsApp, Email, atau mengunjungi channel YouTube saya yang tertera di atas. Terima kasih sudah mengunjungi profil saya!</p>
+                </div>
+            </div>
+
         </div>
     </div>
 </body>
