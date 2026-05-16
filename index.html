@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Diri Saya</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .kartu-data {
+            background-color: white;
+            max-width: 500px;
+            width: 100%;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .foto-profil {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #2c5aa0;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #2c5aa0;
+            margin-bottom: 10px;
+            font-size: 24px;
+        }
+
+        .judul {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 25px;
+        }
+
+        .info-diri {
+            text-align: left;
+            margin: 20px 0;
+        }
+
+        .info-item {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .label {
+            font-weight: bold;
+            color: #2c5aa0;
+            display: inline-block;
+            width: 120px;
+        }
+
+        .tombol {
+            background-color: #2c5aa0;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .tombol:hover {
+            background-color: #1a3c70;
+        }
+
+        #pesan {
+            margin-top: 15px;
+            color: #2c5aa0;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="kartu-data">
+        <img src="https://via.placeholder.com/150" alt="Foto Profil" class="foto-profil">
+        <h1>Nama Lengkap Anda</h1>
+        <p class="judul">Pelajar / Mahasiswa / Pekerja</p>
+
+        <div class="info-diri">
+            <div class="info-item">
+                <span class="label">NIM/NIK</span>
+                <span>: 1234567890</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Tanggal Lahir</span>
+                <span>: 01 Januari 2000</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Alamat</span>
+                <span>: Kota Cirebon, Jawa Barat</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Email</span>
+                <span>: emailanda@contoh.com</span>
+            </div>
+            <div class="info-item">
+                <span class="label">No. HP</span>
+                <span>: 0812-3456-7890</span>
+            </div>
+            <div class="info-item">
+                <span class="label">Hobi</span>
+                <span>: Membaca, Menulis, Berenang</span>
+            </div>
+        </div>
+
+        <button class="tombol" onclick="tampilkanPesan()">Tentang Saya</button>
+        <p id="pesan">Saya adalah orang yang tekun, suka belajar hal baru, dan senang berbagi pengetahuan dengan orang lain.</p>
+    </div>
+
+    <script>
+        function tampilkanPesan() {
+            const pesan = document.getElementById('pesan');
+            if (pesan.style.display === 'block') {
+                pesan.style.display = 'none';
+            } else {
+                pesan.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
